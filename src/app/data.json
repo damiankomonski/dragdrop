@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "positionTop": 57,
+    "positionLeft": 87,
+    "height": 200,
+    "width": 200,
+    "color": "#000000",
+    "oldTopPosition": 57,
+    "oldLeftPosition": 87,
+    "matching": false
+  },
+  {
+    "id": 1,
+    "positionTop": 57,
+    "positionLeft": 87,
+    "height": 200,
+    "width": 200,
+    "color": "#eeeeee",
+    "oldTopPosition": 57,
+    "oldLeftPosition": 87,
+    "matching": false
+  }
+]

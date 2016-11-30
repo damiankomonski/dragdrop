@@ -1,0 +1,35 @@
+body{
+  background-color: #E0E0E0;
+
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  section{
+    margin: 26px 0;
+
+    .title{
+      margin: 26px 0;
+    }
+
+    form{
+      button{
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .your-objects{
+    h2{
+      display: inline-block;
+    }
+    button{
+      display: inline-block;
+      float: right;
+      margin: 25px 0;
+    }
+  }
+
+
+
+}

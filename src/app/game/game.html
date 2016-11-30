@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Drag&Drop Game</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <!-- <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>-->
+            <h4 class="navbar-text navbar-right"><strong> Time: {{game.time}}</strong></h4>
+            <h4 class="navbar-text navbar-right"><strong>Matching objects: {{game.matchingCount}} </strong></h4>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<div ng-repeat="object in game.JSONRandomData"
+     ng-style="{'top': object.positionTop + 'px',
+                'left': object.positionLeft + 'px',
+                'width': object.width + 'px',
+                'height': object.height + 'px',
+                'border-color': object.color}"
+     class="rectangle rectangle-border"></div>
+
+<div ng-repeat="object in game.dataJSON"
+     ng-style="{'top': object.positionTop + 'px',
+                'left': object.positionLeft + 'px',
+                'width': object.width + 'px',
+                'height': object.height + 'px',
+                'background-color': object.color,
+                'oldLeftPosition': object.positionLeft,
+                'oldTopPosition': object.positionTop}"
+     class="rectangle"
+     hm-panmove="game.onHammer($event, object)"
+     hm-panend="game.dropHammer($event, object)"></div>

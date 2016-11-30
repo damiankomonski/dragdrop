@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Drag&Drop Game</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <button ng-click="start.startGame()" class="btn btn-success navbar-right navbar-btn">Start game!</button>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<section class="add-objects">
+<div class="container">
+    <div class="col-sm-offset-3 col-sm-6 col-xs-12">
+        <h2 class="title">Add object</h2>
+
+        <form novalidate>
+            <div class="form-group">
+                <label for="positionTop">Position top <small>(px)</small></label>
+                <input ng-model="start.positionTop" type="number" class="form-control" id="positionTop" placeholder="Position top">
+            </div>
+            <div class="form-group">
+                <label for="positionLeft">Position left <small>(px)</small></label>
+                <input ng-model="start.positionLeft" type="number" class="form-control" id="positionLeft" placeholder="Position left">
+            </div>
+            <div class="form-group">
+                <label for="height">Height <small>(px)</small></label>
+                <input ng-model="start.height" type="number" class="form-control" id="height" placeholder="Height">
+            </div>
+            <div class="form-group">
+                <label for="width">Width <small>(px)</small></label>
+                <input ng-model="start.width" type="number" class="form-control" id="width" placeholder="Width">
+            </div>
+
+            <button ng-click="start.createObject()" type="button" class="btn btn-primary">Add object</button>
+        </form>
+
+    </div>
+</div>
+</section>
+
+<section class="your-objects">
+    <div class="container">
+        <div class="col-sm-offset-3 col-sm-6 col-xs-12">
+            <h2 class="title">Your objects</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Position top</th>
+                    <th>Position left</th>
+                    <th>Height</th>
+                    <th>Width</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="object in start.JSONData">
+                    <th>{{object.id}}</th>
+                    <td>{{object.positionTop}}</td>
+                    <td>{{object.positionLeft}}</td>
+                    <td>{{object.height}}</td>
+                    <td>{{object.width}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
