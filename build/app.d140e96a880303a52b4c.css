@@ -1,0 +1,47 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none; }
+  body .navbar {
+    margin-bottom: 0;
+    position: relative;
+    bottom: 0; }
+  body .rectangle {
+    position: absolute;
+    width: 200px;
+    height: 200px; }
+  body .rectangle-border {
+    background-color: #E0E0E0;
+    border: 6px solid; }
+  body .blue {
+    background-color: #1E88E5; }
+  body .red {
+    background-color: #D81B60; }
+  body .green {
+    background-color: #43A047; }
+body {
+  background-color: #E0E0E0; }
+  body .navbar {
+    margin-bottom: 0; }
+  body section {
+    margin: 26px 0; }
+    body section .title {
+      margin: 26px 0; }
+    body section form button {
+      margin: 10px 0; }
+  body .your-objects h2 {
+    display: inline-block; }
+  body .your-objects button {
+    display: inline-block;
+    float: right;
+    margin: 25px 0; }

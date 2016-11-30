@@ -6,14 +6,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = validator({
-    //odkad zaczynam w drzewie zaleznosci, sciezka od folderu glownego
     entry: {
         app: './src/app/app.js',
         vendor: './src/vendor.js'
     },
 
     output: {
-        filename: '[name].js',
+        filename: '[name].[chunkhash].js',
         path: helpers.absolutePath('build')
     },
 
@@ -68,7 +67,6 @@ module.exports = validator({
     ],
 
     devServer: {
-        port: 4000,
         host: 'localhost',
 
         historyApiFallback: true,
@@ -79,3 +77,7 @@ module.exports = validator({
         stats: 'errors-only'
     }
 });
+
+
+
+
